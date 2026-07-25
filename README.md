@@ -1,4 +1,4 @@
-# ABCD Jarvis Assistant
+# Jarvis Assistant
 
 A small Jarvis-style assistant that can run from the terminal, with optional
 voice input/output when the required packages and microphone support are
