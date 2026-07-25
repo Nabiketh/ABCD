@@ -1,0 +1,7 @@
+"""Run Jarvis with `python -m jarvis_assistant`."""
+
+from jarvis_assistant.cli import run_cli
+
+
+if __name__ == "__main__":
+    raise SystemExit(run_cli())

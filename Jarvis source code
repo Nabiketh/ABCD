@@ -1,0 +1,23 @@
+"""Compatibility launcher for the restructured Jarvis assistant.
+
+The original project used this extensionless file as its main script. The
+application code now lives in src/jarvis_assistant, but this file still works:
+
+    python "Jarvis source code" --text-only
+"""
+
+from pathlib import Path
+import sys
+
+
+PROJECT_ROOT = Path(__file__).resolve().parent
+SRC_DIR = PROJECT_ROOT / "src"
+
+if str(SRC_DIR) not in sys.path:
+    sys.path.insert(0, str(SRC_DIR))
+
+from jarvis_assistant.cli import run_cli
+
+
+if __name__ == "__main__":
+    raise SystemExit(run_cli())
